@@ -1,5 +1,9 @@
 ---
-title: ""
+# A real title is needed: with an empty one, Quarto promotes the page's first
+# heading ("Research Interests") into the title block, which pushed it above the
+# hero and orphaned its list. The title block is hidden below — the hero is the
+# page's visible heading.
+title: "Harjoat S. Bhamra"
 pagetitle: "Harjoat S. Bhamra"
 toc: false
 ---
@@ -22,6 +26,8 @@ hero_links = "".join(f'<a href="{p["links"][k]}">{label}</a>' for k, label in [
     ("imperial_faculty", "Imperial"),
 ])
 hero_html = (
+    # Hide Quarto's own title block on this page only; the hero below is the h1.
+    '<style>#title-block-header { display: none; }</style>'
     f'<div class="hero">'
     f'<div class="hero-text">'
     f'<h1>{p["name"]["display"]}</h1>'
