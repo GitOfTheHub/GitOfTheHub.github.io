@@ -24,7 +24,8 @@ c = p["contact"]
 print(f"## {p['name']['full']}\n")
 print(f"{p['title']}, {p['affiliation']['long']}  \n")
 print(f"{c['address'].strip().replace(chr(10), '  ' + chr(10))}  \n")
-print(f"📧 [{c['email']}](mailto:{c['email']}) · ☎ {c['phone']}\n")
+# Phone number deliberately omitted from the web CV; it stays in the CV PDF.
+print(f"📧 [{c['email']}](mailto:{c['email']})\n")
 ```
 
 ## Academic Employment
