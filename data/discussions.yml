@@ -474,9 +474,8 @@ discussions:
   paper_authors:
   - Rui Albuquerque
   - Neng Wang
-  date: '2007'
-  pdf: null
-  note: 'TODO: locate slide PDF — folder has no extractable content.'
+  date: '2005-08-23'
+  pdf: pdf/discussions/albuquerque-nengwang.pdf
 - id: routledge-zin
   paper_title: Generalized Disappointment Aversion and Asset Prices
   paper_authors:
