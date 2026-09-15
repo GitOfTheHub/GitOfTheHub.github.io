@@ -1,0 +1,41 @@
+# Quarto output
+_site/
+.quarto/
+*.html
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Scratch
+*.swp
+*.tmp
+
+# Source photo (full-res original — only the optimized profile.jpg ships)
+Bhamra_ Harjoat.jpg
+
+/.quarto/
+**/*.quarto_ipynb
+
+# Confidential data — external tenure/promotion reviews. Never published.
+data/private/
+
+# CV build artefacts. The full cv.pdf contains the confidential external-review
+# section, so neither it nor its .tex is tracked; the public pdf/Bhamra-CV.pdf is.
+cv/cv.tex
+cv/cv.pdf
+cv/cv-public.tex
+
+# Internal working notes — kept locally in Dropbox, not published with the site.
+migration-decisions.md
+site-inventory.md
+discussions-inventory.md

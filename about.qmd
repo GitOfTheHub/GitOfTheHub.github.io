@@ -1,0 +1,169 @@
+---
+title: "About"
+---
+
+```{python}
+#| output: asis
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path.cwd()))
+from _helpers import load
+
+p = load("profile")
+print(p["bio_paragraph"])
+```
+
+## Education
+
+```{python}
+#| output: asis
+from _helpers import load
+edu = load("education")
+for e in edu:
+    line = f"**{e['degree']}**"
+    if e.get("field"):
+        line += f", {e['field']}"
+    line += f" — {e['institution']}, {e.get('location','')} ({e['years']})"
+    if e.get("thesis"):
+        line += f". Thesis: *{e['thesis']['title']}*; advisor {e['thesis']['advisor']}"
+    print(f"- {line}")
+```
+
+## Academic Positions
+
+```{python}
+#| output: asis
+from _helpers import load
+emp = load("employment")
+for j in emp["academic"]:
+    yrs = f"{j['start']}–{j['end'] or 'present'}"
+    print(f"- **{yrs}** — {j['title']}, {j['institution']}, {j['location']}")
+```
+
+## Industry Experience
+
+```{python}
+#| output: asis
+from _helpers import load
+emp = load("employment")
+for j in emp.get("industry", []):
+    yrs = f"{j['start']}–{j['end']}"
+    print(f"- **{yrs}** — {j['title']}, {j['institution']}, {j['location']}")
+    if j.get("description"):
+        print(f"  {j['description'].strip()}")
+```
+
+## Research Visits
+
+```{python}
+#| output: asis
+from _helpers import load
+v = load("visits")
+for r in v:
+    date = r["date"]
+    print(f"- **{date}** — {r.get('role','Visitor')}, {r['institution']}, {r.get('location','')}")
+```
+
+## Grants & Fellowships
+
+```{python}
+#| output: asis
+from _helpers import load
+g = load("grants")
+for item in g["shown_on_website"]:
+    label = item["name"]
+    yrs = ""
+    if item.get("start"):
+        yrs = f"{item['start']}–{item.get('end') or 'present'}"
+    elif item.get("year"):
+        yrs = str(item["year"])
+    extra = ""
+    if item.get("amount_gbp"):
+        extra = f" · £{item['amount_gbp']:,}"
+    role = ""
+    if item.get("role"):
+        role = f" · {item['role']}"
+    print(f"- **{yrs}** — {label}{role}{extra}")
+```
+
+## Service
+
+```{python}
+#| output: asis
+from _helpers import load
+s = load("service")
+
+if s.get("editorial"):
+    print("\n### Editorial\n")
+    for e in s["editorial"]:
+        print(f"- **{e['start']}–{e['end']}** — {e['role']}, *{e['journal']}*")
+
+if s.get("program_committees"):
+    print("\n### Program Committees & Reviewing\n")
+    for c in s["program_committees"]:
+        bits = [c["committee"], c.get("role", "")]
+        if c.get("note"):
+            bits.append(c["note"])
+        if c.get("start"):
+            yrs = f"{c['start']}–{c.get('end') or 'present'}"
+            bits.append(yrs)
+        print("- " + " — ".join(b for b in bits if b))
+
+if s.get("peer_review"):
+    print("\n### Peer Review Panels\n")
+    for r in s["peer_review"]:
+        if r.get("year"):
+            yrs = str(r["year"])
+        else:
+            yrs = f"{r['start']}–{r.get('end') or 'present'}"
+        print(f"- **{yrs}** — {r['name']}")
+
+if s.get("keynotes"):
+    print("\n### Keynote Speeches\n")
+    for k in s["keynotes"]:
+        print(f"- **{k['date']}** — *{k['title']}* — {k['venue']}")
+```
+
+## PhD Students
+
+```{python}
+#| output: asis
+from _helpers import load
+st = load("students")
+
+print("\n### Current Advisees\n")
+for s in st["current_advisees"]:
+    line = f"- **{s['name']}** ({s['institution']}, {s['field']}, since {s['start']}) — {s.get('role','')}"
+    if s.get("note"):
+        line += f". {s['note']}"
+    print(line)
+
+print("\n### Past Advisees\n")
+for s in st["past_advisees"]:
+    when = s.get("graduated") or s.get("years")
+    line = f"- **{s['name']}** ({s['institution']}, {s['field']}, {when}) — {s.get('role','')}"
+    if s.get("placement"):
+        line += f". Now: {s['placement']}"
+    print(line)
+
+if st.get("notable_committee_roles"):
+    print("\n### Notable Committee Roles\n")
+    for s in st["notable_committee_roles"]:
+        when = s.get("graduated")
+        line = f"- **{s['name']}** ({s['institution']}, {s['field']}, {when}) — {s.get('role','')}"
+        if s.get("placement"):
+            line += f". Now: {s['placement']}"
+        print(line)
+```
+
+## Contact
+
+```{python}
+#| output: asis
+from _helpers import load
+p = load("profile")
+c = p["contact"]
+print(f"- **Email:** [{c['email']}](mailto:{c['email']})")
+print(f"- **Phone:** {c['phone']}")
+print(f"- **Office:** {c['office']}")
+print(f"- **Address:**\n```\n{c['address'].strip()}\n```")
+```

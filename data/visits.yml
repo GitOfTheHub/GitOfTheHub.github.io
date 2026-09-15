@@ -1,0 +1,33 @@
+# Research visits — drives website "Research Visits" sub-section and CV.
+# Order: most recent first.
+# Use ISO YYYY-MM for short visits, year-range for longer ones.
+
+- institution: BI Norwegian Business School
+  location: Oslo
+  date: 2025-09
+  role: Visitor
+
+- institution: CUHK Business School
+  location: Hong Kong
+  date: 2025-07
+  role: Visitor
+
+- institution: Centre for Macroeconomics, London School of Economics and Political Science
+  location: London
+  date: 2018
+  role: Associate
+
+- institution: Goethe University
+  location: Frankfurt
+  date: 2018
+  role: Senior Visitor
+
+- institution: Goethe University
+  location: Frankfurt
+  date: 2015
+  role: Senior Visitor
+
+- institution: Swiss Finance Institute at EPFL
+  location: Lausanne
+  date: 2012
+  role: Summer Visitor

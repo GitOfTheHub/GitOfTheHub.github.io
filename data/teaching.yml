@@ -1,0 +1,85 @@
+# Teaching — drives website Teaching page + CV Teaching Experience section.
+# Show CURRENT teaching prominently; PAST teaching collapsible / CV-only.
+
+current_year: 2024-2025
+
+# Currently taught at Imperial College Business School. Drives website prominence.
+current:
+
+  - course: Mathematical Foundations
+    program: BSc Economics, Finance and Data Science
+    role: Lecturer
+
+  - course: Maths for Finance
+    program: MSc Finance, MSc FinTech, MSc Investment and Wealth Management, MSc Metals & Energy Finance
+    role: Lecturer
+
+  - course: Asset Pricing Theory
+    program: PhD Finance
+    role: Lecturer
+
+# Past teaching at Imperial CBS. Roll up by course-year for compact display.
+past_imperial:
+  - { year: 2023-2024, course: Mathematical Foundations, program: BSc Economics, Finance and Data Science }
+  - { year: 2023-2024, course: Maths for Finance, program: MSc Finance / FinTech / IWM / Metals & Energy Finance }
+  - { year: 2023-2024, course: Asset Pricing Theory, program: PhD Finance }
+  - { year: 2022-2023, course: Derivatives, program: MSc Finance / FinTech / IWM / Metals & Energy Finance }
+  - { year: 2022-2023, course: Asset Pricing Theory, program: PhD Finance }
+  - { year: 2022-2023, course: Macroeconomics, program: PhD Finance }
+  - { year: 2022-2023, course: Data Analysis Tools, program: PhD (all subjects) }
+  - { year: 2021-2022, course: Derivatives, program: MSc Finance / IWM / Metals & Energy Finance }
+  - { year: 2021-2022, course: Asset Pricing Theory, program: PhD Finance }
+  - { year: 2021-2022, course: Data Analysis Tools, program: PhD (all subjects) }
+  - { year: 2020-2021, course: Derivatives, program: MSc Finance }
+  - { year: 2020-2021, course: Asset Pricing Theory, program: PhD Finance }
+  - { year: 2020-2021, course: Data Analysis Tools, program: PhD (all subjects) }
+  - { year: 2019-2020, course: Derivatives, program: MSc Finance / IWM / Metals & Energy Finance }
+  - { year: 2019-2020, course: Asset Pricing Theory, program: PhD Finance }
+  - { year: 2019-2020, course: Data Analysis Tools, program: PhD (all subjects) }
+  - { year: 2018-2019, course: Derivatives, program: MSc Finance / IWM / Metals & Energy Finance }
+  - { year: 2018-2019, course: Asset Pricing Theory, program: PhD Finance }
+  - { year: 2018-2019, course: Data Analysis Tools, program: PhD (all subjects) }
+  - { year: 2017-2018, course: Derivatives, program: MSc Finance / IWM / Metals & Energy Finance }
+  - { year: 2017-2018, course: Asset Pricing Theory, program: PhD Finance }
+  - { year: 2017-2018, course: Data Analysis Tools, program: PhD (all subjects) }
+  - { year: 2016-2017, course: Derivatives, program: MSc Finance / IWM / Metals & Energy Finance / Finance & Accounting }
+  - { year: 2016-2017, course: Asset Pricing Theory, program: PhD Finance }
+  - { year: 2016-2017, course: Macro-Finance, program: PhD Finance }
+  - { year: 2016-2017, course: Data Analysis Tools, program: PhD (all subjects) }
+  - { year: 2015-2016, course: Derivatives, program: MSc Finance / IWM / Metals & Energy Finance / Finance & Accounting }
+  - { year: 2015-2016, course: Asset Pricing Theory, program: PhD Finance }
+  - { year: 2015-2016, course: Macro-Finance, program: PhD Finance }
+  - { year: 2014-2015, course: Derivatives, program: MSc Finance / IWM / Metals & Energy Finance / Finance & Accounting }
+  - { year: 2014-2015, course: Asset Pricing Theory, program: PhD Finance }
+  - { year: 2014-2015, course: Portfolio Theory, program: Finance Summer School }
+  - { year: 2013-2014, course: Asset Pricing and Derivatives, program: MSc Finance / Metals & Energy Finance }
+  - { year: 2013-2014, course: Portfolio Theory and Regulation, program: Finance Summer School }
+  - { year: 2011-2012, course: Asset Pricing and Derivatives, program: MSc Finance / Metals & Energy Finance }
+  - { year: 2011-2012, course: Asset Pricing Theory, program: PhD Finance }
+  - { year: 2011-2012, course: Advanced Topics in Asset Pricing Theory, program: PhD Finance }
+
+# Past teaching at other institutions — CV only.
+past_other:
+  - { year: 2013, course: International Financial Markets and Institutions, program: BComm, institution: UBC }
+  - { year: 2012, course: Asset Pricing Theory and Monetary Policy, program: PhD Finance, institution: UBC }
+  - { year: 2012, course: Financial Engineering and Risk Management, program: MBA, institution: UBC }
+  - { years: 2010-2011, course: International Financial Management, program: MBA (joint with Donau University), institution: UBC }
+  - { year: 2008, course: Corporate Finance, program: MBA (joint with Donau University), institution: UBC }
+  - { year: 2008, course: Dynamic Portfolio Strategies, program: MBA (joint with Donau University), institution: UBC }
+  - { years: 2006-2009, course: International Financial Management, program: BComm, institution: UBC }
+  - { years: 2003-2010, course: International Financial Markets and Institutions, program: BComm, institution: UBC }
+  - { year: 2003, course: Business Finance, program: BComm, institution: UBC }
+  - { year: 2002, course: Finance II, program: MBA / Masters in Finance / Sloan, role: Instructor, institution: London Business School }
+  - { year: 1995, course: Linear Algebra I, program: Undergraduate (in German), role: Instructor, institution: Heidelberg University }
+
+# Old PhD course on monetary policy — has lecture materials online from current Wix site
+phd_course_materials:
+  - course: Monetary Policy & Asset Prices
+    program: PhD
+    year: 2015
+    lectures:
+      - { number: 1, title: "Basics of Central Banks & Monetary Policy" }
+      - { number: 2, title: "Central Banks, Monetary Policy & Risk" }
+      - { number: 3, title: Liquidity Traps }
+    assignments: [1, 2]
+    note: Material from previous Wix site — verify links still work when scaffolding the site.

@@ -1,0 +1,377 @@
+# Publications — single source of truth for website and CV.
+#
+# Schema:
+#   id              — slug (used as anchor; keep stable across revisions)
+#   title           — full title (preserve stylization e.g. "AND" capitalization)
+#   authors         — list in citation order (alphabetical by surname in economics convention)
+#   year            — print volume year for published; current revision year for working papers
+#   journal         — only for published papers (name, abbrev, volume, issue, pages)
+#   status          — for non-published: "rr_at" (Revise & Resubmit) | "working" | "in_progress"
+#   doi             — Crossref DOI
+#   ssrn_id         — SSRN abstract ID (numeric)
+#   links           — explicit URLs (publisher, ssrn, pdf, etc.)
+#   awards          — list of awards with name + year + venue
+#   presentations   — list of {venue, year} for working papers (drives CV "[Presented at ...]" line)
+#   notes           — free text (e.g. "lead article")
+#   skip_website    — set true to keep on CV only (e.g. paper not yet on SSRN)
+#
+# Sections below: published, under_review, working, in_progress.
+
+published:
+
+  - id: high-inflation-low-default
+    title: "High Inflation: Low Default Risk AND Low Equity Valuations"
+    authors:
+      - Harjoat S. Bhamra
+      - Christian Dorion
+      - Alexandre Jeanneret
+      - Michael Weber
+    year: 2023
+    journal:
+      name: Review of Financial Studies
+      abbrev: RFS
+      volume: 36
+      issue: 3
+      pages: 1192-1252
+    doi: 10.1093/rfs/hhac021
+    ssrn_id: 3290745
+    links:
+      publisher: https://doi.org/10.1093/rfs/hhac021
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3290745
+
+  - id: household-finance-matters
+    title: "Does Household Finance Matter? Small Financial Errors with Large Social Costs"
+    authors:
+      - Harjoat S. Bhamra
+      - Raman Uppal
+    year: 2019
+    journal:
+      name: American Economic Review
+      abbrev: AER
+      volume: 109
+      issue: 3
+      pages: 1116-1154
+    doi: 10.1257/aer.20161076
+    ssrn_id: 2722803
+    links:
+      publisher: https://doi.org/10.1257/aer.20161076
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2722803
+
+  - id: stochastic-idiosyncratic-cash-flow
+    title: "Stochastic Idiosyncratic Cash Flow Risk and Real Options: Implications for Stock Returns"
+    authors:
+      - Harjoat S. Bhamra
+      - Kyung Hwan Shim
+    year: 2017
+    journal:
+      name: Journal of Economic Theory
+      abbrev: JET
+      volume: 168
+      pages: 400-431
+    doi: 10.1016/j.jet.2016.11.005
+    ssrn_id: 2199749
+    awards:
+      - { name: Best Paper Award in Business Valuation, venue: Northern Finance Association, year: 2013 }
+    links:
+      publisher: https://doi.org/10.1016/j.jet.2016.11.005
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2199749
+
+  - id: imperfectly-integrated-markets
+    title: "A Dynamic Equilibrium Model of Imperfectly Integrated Financial Markets"
+    authors:
+      - Harjoat S. Bhamra
+      - Nicolas Coeurdacier
+      - Stéphane Guibaud
+    year: 2014
+    journal:
+      name: Journal of Economic Theory
+      abbrev: JET
+      volume: 154
+      pages: 490-542
+    doi: 10.1016/j.jet.2014.09.011
+    ssrn_id: 2546569
+    links:
+      publisher: https://doi.org/10.1016/j.jet.2014.09.011
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2546569
+
+  - id: asset-prices-heterogeneity
+    title: "Asset Prices with Heterogeneity in Preferences and Beliefs"
+    authors:
+      - Harjoat S. Bhamra
+      - Raman Uppal
+    year: 2014
+    journal:
+      name: Review of Financial Studies
+      abbrev: RFS
+      volume: 27
+      issue: 2
+      pages: 519-580
+    doi: 10.1093/rfs/hht051
+    ssrn_id: 1365032
+    links:
+      publisher: https://doi.org/10.1093/rfs/hht051
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1365032
+
+  - id: monetary-policy-corporate-default
+    title: "Monetary Policy and Corporate Default"
+    authors:
+      - Harjoat S. Bhamra
+      - Adlai J. Fisher
+      - Lars-Alexander Kuehn
+    year: 2011
+    journal:
+      name: Journal of Monetary Economics
+      abbrev: JME
+      volume: 58
+      issue: 5
+      pages: 480-494
+    doi: 10.1016/j.jmoneco.2011.05.010
+    ssrn_id: 1750347
+    links:
+      publisher: https://doi.org/10.1016/j.jmoneco.2011.05.010
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1750347
+
+  - id: aggregate-dynamics-capital-structure
+    title: "The Aggregate Dynamics of Capital Structure and Macroeconomic Risk"
+    authors:
+      - Harjoat S. Bhamra
+      - Lars-Alexander Kuehn
+      - Ilya A. Strebulaev
+    year: 2010
+    journal:
+      name: Review of Financial Studies
+      abbrev: RFS
+      volume: 23
+      issue: 12
+      pages: 4187-4241
+    doi: 10.1093/rfs/hhq075
+    ssrn_id: 1265870
+    notes: Lead article
+    links:
+      publisher: https://doi.org/10.1093/rfs/hhq075
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1265870
+
+  - id: long-run-risks-credit
+    title: "Long Run Risks, Credit Markets, and Financial Structure"
+    authors:
+      - Harjoat S. Bhamra
+      - Lars-Alexander Kuehn
+      - Ilya A. Strebulaev
+    year: 2010
+    journal:
+      name: American Economic Review (Papers and Proceedings)
+      abbrev: AER P&P
+      volume: 100
+      issue: 2
+      pages: 547-551
+    doi: 10.1257/aer.100.2.547
+    links:
+      publisher: https://doi.org/10.1257/aer.100.2.547
+      pdf: https://www.harjoatbhamra.com/_files/ugd/ce4bea_8c74914c31e54b33b911a77e3717c169.pdf
+
+  - id: levered-equity-risk-premium
+    title: "The Levered Equity Risk Premium and Credit Spreads: A Unified Framework"
+    authors:
+      - Harjoat S. Bhamra
+      - Lars-Alexander Kuehn
+      - Ilya A. Strebulaev
+    year: 2010
+    journal:
+      name: Review of Financial Studies
+      abbrev: RFS
+      volume: 23
+      issue: 2
+      pages: 645-703
+    doi: 10.1093/rfs/hhp082
+    ssrn_id: 1016891
+    links:
+      publisher: https://doi.org/10.1093/rfs/hhp082
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1016891
+
+  - id: non-redundant-derivative
+    title: "The Effect of Introducing a Non-Redundant Derivative on the Volatility of Stock-Market Returns When Agents Differ in Risk Aversion"
+    authors:
+      - Harjoat S. Bhamra
+      - Raman Uppal
+    year: 2009
+    journal:
+      name: Review of Financial Studies
+      abbrev: RFS
+      volume: 22
+      issue: 6
+      pages: 2303-2330
+    doi: 10.1093/rfs/hhm076
+    ssrn_id: 891002
+    links:
+      publisher: https://doi.org/10.1093/rfs/hhm076
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=891002
+
+  - id: risk-aversion-intertemporal-substitution
+    title: "The Role of Risk Aversion and Intertemporal Substitution in Dynamic Consumption-Portfolio Choice with Recursive Utility"
+    authors:
+      - Harjoat S. Bhamra
+      - Raman Uppal
+    year: 2006
+    journal:
+      name: Journal of Economic Dynamics and Control
+      abbrev: JEDC
+      volume: 30
+      issue: 6
+      pages: 967-991
+    doi: 10.1016/j.jedc.2005.04.001
+    ssrn_id: 423960
+    links:
+      publisher: https://doi.org/10.1016/j.jedc.2005.04.001
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=423960
+
+  - id: imitation-financial-markets
+    title: "Imitation in Financial Markets"
+    authors:
+      - Harjoat S. Bhamra
+    year: 2000
+    journal:
+      name: International Journal of Theoretical and Applied Finance
+      abbrev: IJTAF
+    links:
+      pdf: https://www.harjoatbhamra.com/_files/ugd/ce4bea_ed651b66a5754b53b10075ed79833c75.pdf
+
+under_review:
+
+  - id: small-growth-distress
+    title: "Small Growth and Distress Returns: Two Sides of the Same Coin?"
+    authors:
+      - Harjoat S. Bhamra
+      - Kyung Hwan Shim
+    year: 2017
+    status: "Revise & Resubmit at the Journal of Finance"
+    ssrn_id: 2348433
+    awards:
+      - { name: Best Paper Award in Business Valuation, venue: Northern Finance Association, year: 2014 }
+    presentations:
+      - { venue: NFA, year: 2014 }
+      - { venue: SAFE Asset Pricing Conference, year: 2014 }
+      - { venue: EFA, year: 2018 }
+    links:
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2348433
+
+working:
+
+  - id: leverage-dynamics-crises
+    title: "Leverage Dynamics and Learning About Economic Crises"
+    authors:
+      - Artur Anschukov
+      - Harjoat S. Bhamra
+      - Lars-Alexander Kuehn
+    year: 2026
+    ssrn_id: 4898492
+    presentations:
+      - { venue: UBC Winter Finance Conference, year: 2024 }
+      - { venue: Midwest Finance Conference, year: 2024 }
+      - { venue: Adam Smith Asset Pricing Workshop, year: 2024 }
+      - { venue: Western Finance Association, year: 2024 }
+      - { venue: SFS Cavalcade, year: 2025 }
+    links:
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4898492
+
+  - id: cdx-fear-leverage
+    title: "CDX Markets, Time-Varying Fear, and Corporate Leverage"
+    authors:
+      - Artur Anschukov
+      - Harjoat S. Bhamra
+      - Lars-Alexander Kuehn
+    year: 2026
+    ssrn_id: 6367639
+    links:
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6367639
+
+  - id: concentrated-economy
+    title: "Asset Pricing in a Concentrated Economy"
+    authors:
+      - Harjoat S. Bhamra
+      - Christian Dorion
+      - Alexandre Jeanneret
+      - Ali Shirazi
+    year: 2026
+    awards:
+      - { name: Best Paper Award in Asset Pricing, venue: SAIF Annual Research Conference, year: 2026 }
+    notes: |
+      Previously circulated as "Equity Prices in a Granular Economy" (Abolghasemi, Bhamra, Dorion, Jeanneret).
+      Ali Shirazi (formerly Ali Abolghasemi) at Saint Mary's University.
+    presentations:
+      - { venue: EFA, year: 2023 }   # under previous title
+    links: {}
+
+  - id: psychological-distance
+    title: "Psychological Distance and Subjective Beliefs"
+    authors:
+      - Harjoat S. Bhamra
+      - Raman Uppal
+      - Johan Walden
+    year: 2022
+    ssrn_id: 4243916
+    presentations:
+      - { venue: RAPS Winter Conference, year: 2020 }
+      - { venue: McGill Winter Finance Conference, year: 2020 }
+      - { venue: Duke-UNC Asset Pricing Conference (accepted), year: 2020 }
+      - { venue: FIRS, year: 2020 }
+      - { venue: Australasian Banking and Finance Conference, year: 2021 }
+      - { venue: AFA, year: 2021 }
+      - { venue: SFS Cavalcade, year: 2023 }
+    links:
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4243916
+
+  - id: behavioral-biases-cancel-out
+    title: "Do the Effects of Individual Behavioral Biases Cancel Out?"
+    authors:
+      - Harjoat S. Bhamra
+      - Raman Uppal
+    year: 2021
+    presentations:
+      - { venue: HKUST Finance Symposium, year: 2014 }
+      - { venue: EFA, year: 2015 }
+      - { venue: SED, year: 2016 }
+      - { venue: Duke-UNC Asset Pricing Conference, year: 2016 }
+      - { venue: AFA, year: 2017 }
+    links:
+      pdf: https://www.dropbox.com/s/rtvjolgf246qr97/_BhamraUppal-BehavioralBiasesDoNotCancelOut-2021-06-27.pdf?dl=0
+
+  - id: stock-market-liberalization
+    title: "Stock Market Liberalization and the Cost of Capital in Emerging Markets"
+    authors:
+      - Harjoat S. Bhamra
+    year: 2009
+    ssrn_id: 1365041
+    links:
+      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1365041
+
+in_progress:
+
+  - id: covid-industry-welfare
+    title: "COVID-19: Industry Level Origins of Changes in Economic Welfare"
+    authors:
+      - Harjoat S. Bhamra
+      - Corrado Macchiarelli
+      - Kemar Whyte
+    year: 2020
+    funding: UKRI Research Grant (PI), 2020–2021, £195,508
+    links: {}   # TODO: ask user whether there is a public link
+
+  - id: wealth-inequality-equity-term-structure
+    title: "Wealth Inequality, Aggregate Risk, and the Equity Term Structure"
+    authors:
+      - Harjoat S. Bhamra
+      - Marco Francischello
+      - Clara Martinez-Toledano
+    year: 2023
+    skip_website: true        # not yet on SSRN — surfaces only on CV
+    presentations:
+      - { venue: Turin Asset Pricing Conference, year: 2021 }
+      - { venue: World Inequality Conference (Paris), year: 2021 }
+      - { venue: 8th HEC-McGill Winter Finance Workshop, year: 2022 }
+      - { venue: INSEAD Finance Symposium, year: 2022 }
+      - { venue: FIRS, year: 2023 }
+      - { venue: EFA, year: 2023 }
+    links: {}
+    note: |
+      Skipped from website until SSRN posted (target 2026-05-31).
+      Scheduled reminder agent: trig_017RPUXNJ78dZMjLJv3xod2s.

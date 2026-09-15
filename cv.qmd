@@ -1,0 +1,261 @@
+---
+title: "Curriculum Vitae"
+subtitle: "Web view. A [PDF version](pdf/Bhamra-CV.pdf) is available (built from the same data files)."
+---
+
+```{python}
+#| output: asis
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path.cwd()))
+from _helpers import load, render_paper
+
+p = load("profile")
+edu = load("education")
+emp = load("employment")
+pubs = load("publications")
+v = load("visits")
+g = load("grants")
+s = load("service")
+st = load("students")
+t = load("teaching")
+
+# Header
+c = p["contact"]
+print(f"## {p['name']['full']}\n")
+print(f"{p['title']}, {p['affiliation']['long']}  \n")
+print(f"{c['address'].strip().replace(chr(10), '  ' + chr(10))}  \n")
+print(f"📧 [{c['email']}](mailto:{c['email']}) · ☎ {c['phone']}\n")
+```
+
+## Academic Employment
+
+```{python}
+#| output: asis
+from _helpers import load
+emp = load("employment")
+for j in emp["academic"]:
+    yrs = f"{j['start']}–{j['end'] or ''}"
+    print(f"- **{yrs}** — {j['title']}, {j['institution']}, {j['location']}")
+```
+
+## Education
+
+```{python}
+#| output: asis
+from _helpers import load
+edu = load("education")
+for e in edu:
+    line = f"**{e['years']}** — {e['degree']}"
+    if e.get("field"):
+        line += f", {e['field']}"
+    line += f", {e['institution']}, {e.get('location','')}"
+    if e.get("thesis"):
+        th = e["thesis"]
+        line += f". Thesis: *{th['title']}*. Committee: " + ", ".join(th.get("committee", []))
+    print(f"- {line}")
+```
+
+## Research
+
+### Published Papers
+
+```{python}
+#| output: asis
+from _helpers import load, render_paper
+pubs = load("publications")
+for p in pubs.get("published", []):
+    print(render_paper(p))
+```
+
+### Under Review
+
+```{python}
+#| output: asis
+from _helpers import load, render_paper
+pubs = load("publications")
+for p in pubs.get("under_review", []):
+    print(render_paper(p))
+```
+
+### Completed Working Papers
+
+```{python}
+#| output: asis
+from _helpers import load, render_paper
+pubs = load("publications")
+for p in pubs.get("working", []):
+    print(render_paper(p))
+```
+
+### Work in Progress
+
+```{python}
+#| output: asis
+from _helpers import load, render_paper
+pubs = load("publications")
+for p in pubs.get("in_progress", []):
+    print(render_paper(p))
+```
+
+## Conference Discussions
+
+```{python}
+#| output: asis
+from _helpers import load
+d = load("discussions")
+for year in sorted(d.get("cv_by_year", {}).keys(), reverse=True):
+    print(f"**{year}** — " + ", ".join(d['cv_by_year'][year]) + "\n")
+```
+
+## Service
+
+```{python}
+#| output: asis
+from _helpers import load
+s = load("service")
+
+if s.get("editorial"):
+    print("\n### Editorial Work\n")
+    for e in s["editorial"]:
+        print(f"- {e['role']} for *{e['journal']}*, {e['start']}–{e['end']}")
+
+if s.get("program_committees"):
+    print("\n### Program Committees & Reviewing\n")
+    for c in s["program_committees"]:
+        bits = [c["committee"], c.get("role", "")]
+        if c.get("note"):
+            bits.append(c["note"])
+        print("- " + " — ".join(b for b in bits if b))
+
+if s.get("peer_review"):
+    print("\n### Peer Review Panels\n")
+    for r in s["peer_review"]:
+        if r.get("year"):
+            yrs = str(r["year"])
+        else:
+            yrs = f"{r['start']}–{r.get('end') or 'present'}"
+        print(f"- {r['name']}, {yrs}")
+
+# NOTE: external_reviews (tenure & promotion cases) are PRIVATE per user direction —
+# kept in data/service.yml for the printable LaTeX CV only, not rendered on the public web CV.
+
+if s.get("keynotes"):
+    print("\n### Keynote Speeches\n")
+    for k in s["keynotes"]:
+        print(f"- *{k['title']}* — {k['venue']}, {k['date']}")
+
+if s.get("referee_for"):
+    print("\n### Refereeing\n")
+    print("Referee for: " + ", ".join(s["referee_for"]) + ".\n")
+```
+
+## Teaching Experience
+
+```{python}
+#| output: asis
+from _helpers import load
+t = load("teaching")
+
+print("\n### Imperial College Business School — Current\n")
+for c in t["current"]:
+    print(f"- {t['current_year']} — Lecturer, {c['course']} ({c['program']})")
+
+print("\n### Imperial College Business School — Past\n")
+for c in t.get("past_imperial", []):
+    print(f"- {c['year']} — Lecturer, {c['course']} ({c['program']})")
+
+if t.get("past_other"):
+    print("\n### Other Institutions\n")
+    for c in t["past_other"]:
+        when = c.get("year") or c.get("years")
+        line = f"- {when} — {c.get('role','Lecturer')}, {c['course']} ({c['program']}), {c['institution']}"
+        print(line)
+```
+
+## PhD Students
+
+```{python}
+#| output: asis
+from _helpers import load
+st = load("students")
+
+print("\n### Main Advisor — Current\n")
+for s in st["current_advisees"]:
+    print(f"- **{s['start']}–** — {s['name']}, {s['institution']} ({s['field']})")
+
+print("\n### Main Advisor — Past\n")
+for s in st["past_advisees"]:
+    when = s.get("graduated") or s.get("years")
+    line = f"- **{when}** — {s['name']}, {s['institution']} ({s['field']})"
+    if s.get("placement"):
+        line += f". {s['placement']}"
+    print(line)
+
+if st.get("notable_committee_roles"):
+    print("\n### Committee Roles\n")
+    for s in st["notable_committee_roles"]:
+        line = f"- **{s.get('graduated','')}** — {s['name']}, {s['institution']} ({s['field']}) — {s.get('role','')}"
+        if s.get("placement"):
+            line += f". {s['placement']}"
+        print(line)
+
+if st.get("cv_only_examiner_roles"):
+    print("\n### External Examiner / Reviewer\n")
+    for r in st["cv_only_examiner_roles"]:
+        print(f"- **{r['year']}** — {r['role']}, {r['candidate']}, {r['institution']}")
+```
+
+## Awards, Grants, and Fellowships
+
+```{python}
+#| output: asis
+from _helpers import load
+g = load("grants")
+for sec_name, sec_key in [("Fellowships and Grants (Current)", "shown_on_website"),
+                          ("Other Awards, Grants, Scholarships", "cv_only")]:
+    items = g.get(sec_key, []) or []
+    if not items:
+        continue
+    print(f"\n### {sec_name}\n")
+    for item in items:
+        yrs = ""
+        if item.get("start"):
+            yrs = f"{item['start']}–{item.get('end') or 'present'}"
+        elif item.get("year"):
+            yrs = str(item["year"])
+        elif item.get("years"):
+            yrs = item["years"]
+        extra = ""
+        if item.get("amount_gbp"):
+            extra = f" · £{item['amount_gbp']:,}"
+        elif item.get("amount_cad"):
+            extra = f" · CAD {item['amount_cad']:,}"
+        print(f"- **{yrs}** — {item['name']}{extra}")
+```
+
+## Research Visits
+
+```{python}
+#| output: asis
+from _helpers import load
+v = load("visits")
+for r in v:
+    print(f"- **{r['date']}** — {r.get('role','Visitor')}, {r['institution']}, {r.get('location','')}")
+```
+
+## Industry Experience
+
+```{python}
+#| output: asis
+from _helpers import load
+emp = load("employment")
+for j in emp.get("industry", []):
+    yrs = f"{j['start']}–{j['end']}"
+    print(f"- **{yrs}** — {j['title']}, {j['institution']}, {j['location']}")
+    if j.get("description"):
+        print(f"  {j['description'].strip()}")
+```
+
+<!-- Personal details (year of birth, citizenship, languages, computer skills)
+     are deliberately omitted from the web CV — migration decision #14. They
+     appear only in the CV PDF, which cv/build_cv.py renders from the same data. -->

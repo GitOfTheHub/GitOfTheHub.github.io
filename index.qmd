@@ -1,0 +1,70 @@
+---
+title: ""
+pagetitle: "Harjoat S. Bhamra"
+toc: false
+---
+
+```{python}
+#| output: asis
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path.cwd()))
+from _helpers import load
+
+p = load("profile")
+bio = " ".join(w for w in p["bio_paragraph"].split() if w)
+hero_links = "".join(f'<a href="{p["links"][k]}">{label}</a>' for k, label in [
+    ("google_scholar", "Google Scholar"),
+    ("ssrn", "SSRN"),
+    ("repec", "RePEc"),
+    ("orcid", "ORCID"),
+    ("cepr", "CEPR"),
+    ("niesr", "NIESR"),
+    ("imperial_faculty", "Imperial"),
+])
+hero_html = (
+    f'<div class="hero">'
+    f'<div class="hero-text">'
+    f'<h1>{p["name"]["display"]}</h1>'
+    f'<p class="subtitle">{p["title"]}<br>{p["affiliation"]["short"]}</p>'
+    f'<p>{bio}</p>'
+    f'<div class="profile-links">'
+    f'<a href="mailto:{p["contact"]["email"]}">{p["contact"]["email"]}</a>'
+    f'{hero_links}'
+    f'</div>'
+    f'</div>'
+    f'<div class="hero-image"><img src="profile.jpg" alt="Harjoat S. Bhamra"></div>'
+    f'</div>'
+)
+print("::: {=html}")
+print(hero_html)
+print(":::")
+```
+
+## Research Interests
+
+```{python}
+#| output: asis
+from _helpers import load
+p = load("profile")
+print("<ul>")
+for r in p["research_interests"]:
+    print(f"<li>{r}</li>")
+print("</ul>")
+```
+
+## Selected Recent Work
+
+```{python}
+#| output: asis
+from _helpers import load, render_paper
+pubs = load("publications")
+# Show top 3 published + R&R + top 3 working
+shown = []
+shown += pubs.get("published", [])[:3]
+shown += [p for p in pubs.get("under_review", []) if not p.get("skip_website")]
+shown += [p for p in pubs.get("working", [])[:3] if not p.get("skip_website")]
+for p in shown:
+    print(render_paper(p))
+```
+
+[See all research →](research.qmd)

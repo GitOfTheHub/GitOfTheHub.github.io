@@ -1,0 +1,22 @@
+/* Minor polish that's easier in plain CSS than SCSS. */
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+article.page p {
+  text-wrap: pretty;
+}
+
+/* Subtle drop-cap effect on the bio paragraph if we want — disabled by default */
+
+/* Smooth fade-in on page load */
+main {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

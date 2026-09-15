@@ -1,0 +1,216 @@
+# Seminars and conferences where Bhamra presented his own papers.
+# Year-keyed lists, verbatim from the Jan 2025 CV (with light dedup).
+# CV ONLY — not rendered on the website.
+#
+# To update: add the year as a new key, paste the venues as a YAML list.
+
+by_year:
+  2024:
+    - WFA
+    - EFA
+    - Midwest Finance Meetings
+    - Adam Smith Asset Pricing Workshop
+    - Toronto (Rotman)
+    - University of Luxembourg (to be scheduled)
+    - CUHK (to be scheduled)
+    - ANU (to be scheduled)
+    - Queen Mary (to be scheduled)
+
+  2023:
+    - SFS Cavalcade
+    - FIRS
+    - Toronto (Rotman)
+    - EFA
+
+  2022:
+    - 8th HEC-McGill Winter Finance Workshop
+    - INSEAD Finance Symposium
+    - FIRS
+    - London Business School
+    - Wisconsin-Madison
+    - UNSW
+    - Boston University
+    - Tsinghua University
+
+  2021:
+    - 6th Annual Conference on Network Science and Economics
+    - Turin Asset Pricing Conference
+    - World Inequality Conference (Paris)
+    - Australasian Banking and Finance Conference
+    - EFA
+
+  2020:
+    - Mannheim
+    - LSE (Econ)
+    - National Institute of Economic and Social Research (London)
+    - Duke-UNC Asset Pricing Conference (cancelled)
+    - McGill-HEC Winter Finance Conference
+
+  2019:
+    - NFA
+    - RAPS Winter Finance Conference
+    - FIRS (cancelled)
+    - Cambridge
+
+  2018:
+    - WFA
+    - AFA
+    - EFA
+    - SFS Cavalcade
+    - World Finance Conference
+    - Norwegian School of Economics
+    - Goethe University (Frankfurt)
+    - ESSEC Paris
+    - Venice Macro-Finance Conference
+    - LBS Summer Finance Symposium
+    - NBER Summer Institute
+
+  2017:
+    - AFA
+    - SED
+    - Gutmann Institute (Vienna University of Economics and Finance)
+    - Adam Smith Asset Pricing Conference
+    - Imperial/CEPR Financial Economics Conference
+    - SAFE Asset Pricing Conference
+    - HEC Montreal
+    - Lugano
+    - LBS
+
+  2016:
+    - Duke/UNC Asset Pricing Conference
+    - London Business School
+    - Amsterdam
+    - Tilburg
+    - Rotterdam
+    - Birkbeck
+    - Queen Mary London
+    - Econometric Society Winter Meetings
+    - SED
+    - NFA
+    - EFA
+    - WFA
+    - UBC Winter Finance Conference
+
+  2015:
+    - Napa Finance Conference
+    - Reading University
+    - Copenhagen Business School
+    - Goethe University (Frankfurt)
+    - Adam Smith Asset Pricing Conference
+    - Econometric Society World Congress (2 papers)
+    - NFA
+    - SED
+    - EFA
+    - AFA
+
+  2014:
+    - Carleton University
+    - HEC Montreal
+    - Frontiers of Finance (Warwick University)
+    - CAPR Workshop on Investment & Production Based Asset Pricing
+    - EFA
+    - Northern Finance Association
+    - SAFE Asset Pricing Conference
+    - Hong Kong UST Finance Symposium
+
+  2013:
+    - University of Southern California (Marshall School)
+    - Bank of Canada Fixed Income Conference
+    - Society for Macroeconomic Dynamics
+    - Norwegian School of Business
+    - McGill University
+    - Nottingham University Business School
+    - Northern Finance Association
+    - Tel-Aviv University Finance Conference
+
+  2012:
+    - AEA
+    - IE Madrid
+    - University of Oxford (Saïd School)
+    - Cass Business School
+    - Reading University
+
+  2011:
+    - University of New South Wales
+    - University of Technology Sydney
+    - University of Sydney
+    - Bank of Canada
+    - University of Cambridge
+
+  2010:
+    - AFA
+    - AEA
+    - EFA
+    - CEPR Asset Pricing Meetings (Gerzensee)
+    - Carnegie-Rochester Conference on Public Policy
+    - NBER
+    - Tel-Aviv
+
+  2009:
+    - WFA
+    - SED
+    - UBC Summer Finance Conference
+    - Foundation for Advancement of Research in Financial Economics (FARFE)
+    - UNC Jackson Hole Ski Conference
+    - Concordia
+    - London Business School
+    - London School of Economics
+    - Lausanne
+
+  2008:
+    - Goethe University (Frankfurt)
+    - University of Southern Denmark (Odense)
+
+  2007:
+    - WFA
+    - AFA
+    - EFA
+    - Duke/UNC Asset Pricing Conference
+    - Stanford Institute for Theoretical Economics Summer Workshop (SITE)
+    - Pacific Northwest Finance Conference
+    - Duke
+    - UNC
+    - Calgary
+    - Vienna
+
+  2006:
+    - CEPR Asset Pricing Meetings (Gerzensee)
+    - Optimization Problems in Financial Economics (Banff)
+    - Cass School of Business (City University, London)
+
+  2005:
+    - NFA
+    - UBC Summer Finance Conference
+    - Newton Institute Quantitative Finance Workshop (Cambridge)
+    - UBC (Math Finance)
+
+  2004:
+    - WFA
+
+  2003:
+    - WFA
+    - Stanford Institute for Theoretical Economics Summer Workshop (SITE)
+    - North American Summer Meetings of the Econometric Society (2)
+    - NFA
+    - Pacific Northwest Finance Conference
+    - INFINITI Conference on International Finance (Trinity College, Dublin)
+    - Ente Einaudi Institute (Rome)
+    - University of Southern Switzerland (Lugano)
+    - HEC Paris
+    - Colorado (Leeds School of Business, Boulder)
+    - Kellogg
+    - UBC
+    - Oxford (Saïd School)
+    - Bocconi
+    - Stockholm School of Economics
+
+  2002:
+    - Stanford Institute for Theoretical Economics Summer Workshop (SITE)
+    - EFA
+    - Arne Ryde Foundation Workshop in Economic Theory (University of Lund, Sweden)
+    - Tilburg University
+    - Imperial College
+    - University of Padova
+
+  1999:
+    - Applications of Physics in Financial Analysis (Trinity College, Dublin)

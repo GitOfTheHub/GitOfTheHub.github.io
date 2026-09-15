@@ -1,0 +1,73 @@
+# Identity, contact, bio, and external profile links.
+# Drives both website header/contact pages and CV header.
+
+name:
+  full: Harjoat S. Bhamra
+  display: Harjoat Bhamra
+  short: H. S. Bhamra
+
+title: Professor of Finance
+
+affiliation:
+  short: Imperial College Business School
+  long: Imperial College Business School, Imperial College London
+
+fellowships:
+  - { name: CEPR Research Fellow, organization: Centre for Economic Policy Research }
+  - { name: Fellow, organization: National Institute of Economic and Social Research (NIESR), since: 2020 }
+
+contact:
+  email: h.bhamra@imperial.ac.uk
+  phone: "+44 (0)20 7594 9077"
+  office: 53 Prince's Gate, Business School Building, Office 4.03
+  address: |
+    Imperial College Business School
+    South Kensington Campus
+    London SW7 2AZ
+    United Kingdom
+
+bio_paragraph: |
+  Harjoat Bhamra is Professor of Finance at Imperial College Business School,
+  a CEPR Research Fellow, and a Fellow of the National Institute of Economic
+  and Social Research (NIESR). His research spans asset pricing theory,
+  credit risk, monetary policy, household finance, and macro-finance, with
+  publications in the *Review of Financial Studies*, *American Economic
+  Review*, *Journal of Economic Theory*, and the *Journal of Monetary
+  Economics*. He received his PhD in Finance from London Business School in
+  2003. Before LBS he read Mathematics
+  at St. John's College, Cambridge, including Part III of the Mathematical
+  Tripos, and spent 1996–97 as an interest-rate derivatives trader at First
+  National Bank of Chicago in London prior to entering academia.
+
+research_interests:
+  - Asset pricing theory
+  - Disaster risk
+  - Credit risk
+  - Monetary policy
+  - Household finance
+  - Macro-finance
+
+links:
+  google_scholar: https://scholar.google.com/citations?user=9zB2ZbgAAAAJ
+  orcid: https://orcid.org/0000-0002-7482-5051
+  ssrn: https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=327262
+  repec: https://ideas.repec.org/e/pbh48.html
+  imperial_faculty: https://profiles.imperial.ac.uk/h.bhamra
+  cepr: https://cepr.org/about/people/harjoat-singh-bhamra
+  niesr: https://www.niesr.ac.uk/people/bhamra-h
+  linkedin: https://www.linkedin.com/in/harjoat
+  twitter: https://twitter.com/harjoatbhamra
+
+# CV-only (not displayed on website per #14 decision):
+personal:
+  year_of_birth: 1974
+  citizenship: Dual British & Canadian
+  languages:
+    - { language: English, level: native speaker }
+    - { language: German, level: fluent }
+    - { language: French, level: basic written and spoken }
+    - { language: Punjabi, level: basic written and spoken }
+    - { language: Italian, level: basic written and spoken }
+  computer_skills:
+    - MATLAB
+    - Mathematica

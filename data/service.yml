@@ -1,0 +1,95 @@
+# External service — drives condensed Service section on website + full CV section.
+# Decision #10 + #13: AE role + Adam Smith + recurring committees (collapsed) +
+# ESRC panel + keynotes. Tenure reviews are confidential — CV only.
+
+# WEBSITE: shown.
+editorial:
+
+  - role: Associate Editor
+    journal: Management Science
+    start: 2013
+    end: 2024
+
+# WEBSITE: shown.
+program_committees:
+
+  - committee: Adam Smith Asset Pricing
+    role: Program Committee Member
+    start: 2018
+    end: null      # ongoing
+    co_organizer_years: [2018]
+
+  - committee: Western Finance Association (WFA)
+    role: Program Committee
+    note: Recurring 2007–present
+
+  - committee: Northern Finance Association (NFA)
+    role: Program Committee
+    note: Recurring 2006–present
+
+  - committee: European Finance Association (EFA)
+    role: Reviewer
+    note: Recurring
+
+  - committee: SFS Cavalcade
+    role: Reviewer
+    note: Recurring
+
+# WEBSITE: shown.
+peer_review:
+
+  - name: ESRC Peer Review Panel — Large Grants in the Social Sciences
+    year: 2022
+
+# WEBSITE: shown.
+keynotes:
+
+  - title: Financial Markets and Government Economic Policy
+    venue: 8th Global Conference on Business Management and Social Sciences
+    date: 2022-03-18
+
+  - title: "Households: Beliefs, Portfolios and Asset Prices"
+    venue: ECONCLAVE
+    date: 2022-03-04
+
+  - title: Financial Markets and Government Economic Policy
+    venue: BEF Forum
+    date: 2020-06-23
+
+# CV ONLY.
+referee_for:
+  - Journal of Finance
+  - Review of Financial Studies
+  - Journal of Financial Economics
+  - Econometrica
+  - Econometric Society Monograph Series
+  - Review of Economic Studies
+  - Review of Finance
+  - Journal of Monetary Economics
+  - Journal of Financial and Quantitative Analysis
+  - Journal of Mathematical Economics
+  - Journal of International Economics
+  - European Economic Review
+  - Journal of Economic Dynamics and Control
+  - Management Science
+  - Journal of Banking & Finance
+  - Mathematical Finance
+  - Finance Research Letters
+  - Journal of International Money and Finance
+  - Canadian Journal of Economics
+  - European Journal of Finance
+  - Journal of Corporate Finance
+  - Quarterly Review of Economics and Finance
+
+# PRIVATE — External reviews (tenure and promotion cases) live in
+# data/private/external_reviews.yml, which is gitignored and never published.
+# cv/build_cv.py merges that file in at build time for the printable CV PDF only.
+
+# CV ONLY — Talks on research and publishing.
+talks_on_publishing:
+  - { occasion: Speech on Research and Publishing for Assistant Professors, venue: NFA, year: 2022 }
+
+# CV ONLY — Older one-off committee work.
+historical_committee_roles:
+  - { year: 2017, role: Macro-Finance Society Meetings Co-organizer }
+  - { year: 2010, role: Program Co-Chair, UBC Winter Finance Conference }

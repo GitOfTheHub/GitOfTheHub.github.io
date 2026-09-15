@@ -1,0 +1,23 @@
+---
+title: "Teaching"
+---
+
+```{python}
+#| output: asis
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path.cwd()))
+from _helpers import load
+
+t = load("teaching")
+
+print(f"## Current Courses ({t['current_year']})\n")
+for c in t["current"]:
+    print(f"**{c['course']}** — {c['program']}\n")
+
+print("\n## Past Teaching at Imperial College Business School\n")
+print("<details><summary>Show full history</summary>\n")
+print("\n| Year | Course | Programme |\n|---|---|---|")
+for c in t["past_imperial"]:
+    print(f"| {c['year']} | {c['course']} | {c['program']} |")
+print("\n</details>\n")
+```

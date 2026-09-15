@@ -1,0 +1,94 @@
+# PhD students — drives website "Students" section + CV supervision section.
+# Decision #12: show current advisees + past advisees with placements.
+# Examiner-only roles are CV-only.
+
+current_advisees:
+
+  - name: Artur Anschukov
+    institution: Imperial College Business School
+    field: Finance
+    start: 2018
+    role: Main Advisor
+    note: Coauthor on Leverage Dynamics and CDX papers.
+
+  - name: Nicola Ceneda
+    institution: Imperial College Business School
+    field: Finance
+    start: 2021
+    role: Main Advisor
+
+  - name: Omar Idrissi
+    institution: Imperial College Business School
+    field: Finance
+    start: 2023
+    role: Main Advisor
+
+past_advisees:
+
+  - name: Daren Wei
+    institution: Imperial College Business School
+    field: Finance
+    graduated: 2017
+    role: Main Advisor
+    placement: Barclays Global Investors (offered Assistant Professorship at Tsinghua University)
+
+  - name: Edward Golosov
+    institution: Imperial College Business School
+    field: Finance
+    graduated: 2017
+    role: Main Advisor
+    placement: Running own business
+
+  - name: Lei Ding
+    institution: Imperial College Business School
+    field: Finance
+    graduated: 2014
+    role: Main Advisor
+
+  - name: Can Gao
+    institution: Imperial College Business School
+    field: Finance
+    years: 2015-2020
+    role: Initial Advisor
+    placement: Assistant Professor, University of St. Gallen (formerly SAFE, Frankfurt)
+
+notable_committee_roles:
+
+  - name: Lars Kuehn
+    institution: University of British Columbia
+    field: Finance
+    graduated: 2008
+    role: Committee Member
+    placement: Professor, Carnegie Mellon University
+
+  - name: Paul Whelan
+    institution: Imperial College Business School
+    field: Finance
+    graduated: 2014
+    role: Committee Member & Internal Examiner
+    placement: Associate Professor, Copenhagen Business School
+
+# CV-only — external PhD examiner roles. Not shown on website.
+cv_only_examiner_roles:
+  - { year: 2006, candidate: Yin-Chen Chu, institution: UBC (Economics), role: University Examiner }
+  - { year: 2009, candidate: Doris Poon, institution: UBC (Economics), role: University Examiner }
+  - { year: 2009, candidate: Georgy Chabakauri, institution: London Business School (Finance), role: External Examiner }
+  - { year: 2016, candidate: Messaoud Chibane, institution: EDHEC Business School (Finance), role: External Examiner }
+  - { year: 2018, candidate: Petar Sabtchevsky, institution: London School of Economics (Finance), role: External Examiner }
+  - { year: 2019, candidate: Mikhail Tirskikh, institution: London Business School (Finance), role: External Examiner }
+  - { year: 2019, candidate: Ishita Sen, institution: London Business School (Finance), role: External Examiner }
+  - { year: 2019, candidate: Brandon Ho, institution: London School of Economics (Finance), role: External Examiner }
+  - { year: 2019, candidate: Claudio Bellani, institution: Imperial College (Mathematics), role: Late Stage Reviewer }
+  - { year: 2021, candidate: Thilo Kind, institution: London Business School (Finance), role: External Examiner }
+  - { year: 2022, candidate: Varun Sharma, institution: London Business School (Finance), role: External Examiner }
+
+# Undergraduate supervision — CV only.
+undergraduate:
+  - years: 2020-2021
+    role: Undergraduate Research Opportunity Supervisor
+    students: [Matteo di Venti, Wasim Ahmed]
+    institution: Imperial College (Mathematics)
+  - year: 2021
+    role: Third Year Project Supervisor
+    students: [Matteo di Venti]
+    institution: Imperial College (Mathematics)

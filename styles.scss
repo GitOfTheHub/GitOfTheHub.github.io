@@ -1,0 +1,182 @@
+/*-- scss:defaults --*/
+
+// Modern academic palette: subtle warm gray + deep navy accent
+$primary: #1a3a5c;
+$body-color: #1f2937;
+$link-color: #1a3a5c;
+$navbar-bg: #ffffff;
+$navbar-fg: #1f2937;
+$navbar-hl: #1a3a5c;
+$body-bg: #ffffff;
+
+$h1-font-size: 2.5rem;
+$h2-font-size: 1.65rem;
+$h3-font-size: 1.25rem;
+$h4-font-size: 1.10rem;
+$headings-font-weight: 600;
+$headings-line-height: 1.25;
+
+/*-- scss:rules --*/
+
+// Cleaner header spacing
+h1.title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+// Tighter, scannable paper entries on research/discussions pages
+.paper-entry {
+  margin: 0 0 1.4rem 0;
+  padding-left: 0;
+  border-left: none;
+}
+
+.paper-title {
+  font-weight: 600;
+  color: $primary;
+}
+
+.paper-meta {
+  color: #5b6573;
+  font-size: 0.95em;
+  margin-top: 0.15rem;
+}
+
+.paper-links {
+  margin-top: 0.25rem;
+  font-size: 0.9em;
+}
+
+.paper-links a {
+  margin-right: 0.75rem;
+  text-decoration: none;
+  color: $primary;
+  border-bottom: 1px dotted $primary;
+}
+
+.paper-links a:hover {
+  border-bottom-style: solid;
+}
+
+.award-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.45rem;
+  background: #fef3c7;
+  color: #78350f;
+  border-radius: 3px;
+  font-size: 0.8em;
+  font-weight: 500;
+  vertical-align: 2px;
+}
+
+.status-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.45rem;
+  background: #dbeafe;
+  color: #1e3a8a;
+  border-radius: 3px;
+  font-size: 0.8em;
+  font-weight: 500;
+  vertical-align: 2px;
+}
+
+// Hero block on homepage
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-image {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.hero-text .subtitle {
+  color: #5b6573;
+  font-size: 1.15rem;
+  margin: 0 0 1rem 0;
+}
+
+.hero-image img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 56% 25%;   /* focus on the face — adjust if needed */
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+// Profile-link row under hero
+.profile-links {
+  margin: 0.75rem 0 0 0;
+  font-size: 0.95em;
+}
+
+.profile-links a {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 0.35rem;
+  color: $primary;
+  text-decoration: none;
+  border-bottom: 1px dotted $primary;
+}
+
+.profile-links a:hover {
+  border-bottom-style: solid;
+}
+
+// Section dividers on CV / About pages
+.cv-section {
+  margin-top: 2rem;
+}
+
+.cv-entry {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+  align-items: baseline;
+}
+
+.cv-entry .cv-date {
+  color: #5b6573;
+  font-size: 0.95em;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 600px) {
+  .cv-entry {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+}

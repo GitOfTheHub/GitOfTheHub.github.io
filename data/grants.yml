@@ -1,0 +1,76 @@
+# Grants & fellowships shown on website (a small section per decision #11).
+# CV-only items (early-career scholarships) listed separately at bottom.
+
+shown_on_website:
+
+  - name: Fellow, National Institute of Economic and Social Research (NIESR)
+    location: London
+    start: 2020
+    end: null     # ongoing
+    kind: fellowship
+
+  - name: UKRI Research Grant — COVID-19 Industry Level Origins of Fluctuations in Growth Rates and Economic Welfare
+    funder: UKRI (UK Research and Innovation)
+    role: Principal Investigator
+    amount_gbp: 195508
+    start: 2020
+    end: 2021
+    kind: grant
+
+# CV-only — not shown on website (per decision #11).
+cv_only:
+
+  - name: Winner — Teaching Excellence Award for PhD Supervision
+    institution: Imperial College Business School
+    year: 2014-2015
+    kind: teaching_award
+
+  - name: Nominated — Teaching Excellence Awards (MSc Core, Innovation in Teaching, Inclusivity in Teaching) and Student Academic Choice Awards
+    institution: Imperial College Business School
+    year: 2018-2019
+    kind: teaching_nomination
+
+  - name: Nominated — Student Academic Choice Awards
+    institution: Imperial College Business School
+    year: 2017-2018
+    kind: teaching_nomination
+
+  - name: Social Sciences and Humanities Research Council (SSHRC) Grant
+    funder: SSHRC Canada
+    amount_cad: 45000
+    year: 2010
+    kind: grant
+
+  - name: Social Sciences and Humanities Research Council (SSHRC) Grant
+    funder: SSHRC Canada
+    amount_cad: 45000
+    year: 2007
+    kind: grant
+
+  - name: PhD Student Travel Award (Western Finance Association, Los Cabos)
+    year: 2003
+    kind: travel_award
+
+  - name: United Kingdom Economics and Social Science Research Council Scholarship
+    years: 1999-2002
+    kind: scholarship
+
+  - name: LBS PhD Scholarship
+    year: 1998
+    kind: scholarship
+
+  - name: Fulbright Fellowship (declined)
+    year: 1996
+    kind: scholarship
+
+  - name: Heidelberg Scholarship — Baden-Württemberg State Government (3 awarded annually)
+    year: 1995
+    kind: scholarship
+
+  - name: Horne Scholarship
+    years: 1994-1996
+    kind: scholarship
+    description: Awarded based on end-of-year examination results.
+
+# Note: best-paper awards live with the paper itself in publications.yml
+# (rendered inline as award badges). Don't duplicate them here.

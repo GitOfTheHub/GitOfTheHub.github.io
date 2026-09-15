@@ -1,0 +1,28 @@
+---
+title: "Research"
+---
+
+```{python}
+#| output: asis
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path.cwd()))
+from _helpers import load, render_paper
+
+pubs = load("publications")
+
+def section(heading: str, items: list, intro: str = ""):
+    if not items:
+        return
+    print(f"\n## {heading}\n")
+    if intro:
+        print(intro + "\n")
+    for p in items:
+        if p.get("skip_website"):
+            continue
+        print(render_paper(p))
+
+section("Publications", pubs.get("published", []))
+section("Under Review", pubs.get("under_review", []))
+section("Working Papers", pubs.get("working", []))
+section("Work in Progress", pubs.get("in_progress", []))
+```

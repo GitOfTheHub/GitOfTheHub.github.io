@@ -1,0 +1,37 @@
+# Academic employment + industry experience. Drives CV employment section.
+# Order: most recent first within each subsection.
+
+academic:
+  - title: Professor (with tenure)
+    institution: Imperial College Business School
+    location: London, UK
+    start: 2024
+    end: null    # current
+
+  - title: Associate Professor (with tenure)
+    institution: Imperial College Business School
+    location: London, UK
+    start: 2011
+    end: 2024
+
+  - title: Associate Professor (with tenure)
+    institution: Sauder School of Business, University of British Columbia
+    location: Vancouver, Canada
+    start: 2011
+    end: 2014
+
+  - title: Assistant Professor
+    institution: Sauder School of Business, University of British Columbia
+    location: Vancouver, Canada
+    start: 2003
+    end: 2011
+
+industry:
+  - title: Assistant Structured Products Trader (Interest Rate Derivatives)
+    institution: First National Bank of Chicago
+    location: London, UK
+    start: 1996
+    end: 1997
+    description: |
+      Responsible for pricing exotic swaps (ratchets, quantos), producing
+      daily risk reports and risk-managing a portfolio of structured products.

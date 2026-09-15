@@ -1,0 +1,17 @@
+---
+title: "Discussions"
+subtitle: "Conference and seminar discussions of papers by others."
+---
+
+```{python}
+#| output: asis
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path.cwd()))
+from _helpers import load, render_discussion
+
+d = load("discussions")
+for item in d["discussions"]:
+    if item.get("skip_website"):
+        continue
+    print(render_discussion(item))
+```

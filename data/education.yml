@@ -1,0 +1,33 @@
+# Education — drives CV Education section and About-page details on website.
+# Order: most recent first.
+
+- degree: PhD
+  field: Finance
+  institution: London Business School, University of London
+  location: England
+  years: 1998-2003
+  thesis:
+    title: General Equilibrium Asset Pricing in Incomplete Markets
+    advisor: Raman Uppal
+    committee:
+      - Süleyman Başak
+      - Francisco Gomes
+      - Raman Uppal (Advisor)
+
+- degree: MMath (Part III, Mathematical Tripos)
+  field: Mathematics
+  institution: St. John's College, University of Cambridge
+  location: England
+  years: 1997-1998
+
+- degree: MA
+  field: Mathematics
+  institution: St. John's College, University of Cambridge
+  location: England
+  years: 1992-1996
+
+- degree: Heidelberg Exchange Scholar
+  field: Mathematics and Theoretical Physics
+  institution: University of Heidelberg
+  location: Germany
+  years: 1994-1995

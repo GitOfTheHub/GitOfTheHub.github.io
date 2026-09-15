@@ -1,0 +1,563 @@
+# Conference / seminar discussions. Rebuilt from
+# ~/Dropbox/.../02-Discussions/ folder by _scripts/ingest_discussions.py.
+# Edit data, not this file — re-run the ingest script after adding new folders.
+#
+# Schema:
+#   id              — slug derived from folder name
+#   paper_title     — title of the paper being discussed
+#   paper_authors   — list of original-paper authors
+#   date            — date of discussion (YYYY-MM-DD)
+#   pdf             — relative path to slides PDF inside the repo
+#
+# `null` fields need manual fill-in.
+
+discussions:
+- id: feng-luo-westerfield
+  paper_title: The Optimal Schedules of Incentives and Cash Flows
+  paper_authors:
+  - Feng
+  - Luo
+  - Westerfield
+  date: '2025-08-25'
+  pdf: pdf/discussions/feng-luo-westerfield.pdf
+- id: hackbarth
+  paper_title: 'Maturity Overhang: Evidence from M&A'
+  paper_authors:
+  - Chen
+  - Hackbarth
+  - Harford
+  - Luo
+  date: '2025'
+  pdf: pdf/discussions/hackbarth.pdf
+- id: lochstoer-lundeby-tancheva
+  paper_title: Dynamic Trading and Asset Pricing with Time-Inconsistent Agents
+  paper_authors:
+  - Lars A. Lochstoer
+  - Lundeby
+  - Tancheva
+  date: '2024-09-24'
+  pdf: pdf/discussions/lochstoer-lundeby-tancheva.pdf
+- id: cieslak-khorrami
+  paper_title: Risk Premia, Subjective Beliefs, and Forward Guidance
+  paper_authors:
+  - Anna Cieslak
+  - Paymon Khorrami
+  date: '2024-05-29'
+  pdf: pdf/discussions/cieslak-khorrami.pdf
+- id: climatechange-piontek-hansen
+  paper_title: 'Modeling Climate and Economic Dynamics: Optimist vs. Pessimist Views'
+  paper_authors:
+  - Piontek
+  - Hansen
+  date: '2024-05-01'
+  pdf: pdf/discussions/climatechange-piontek-hansen.pdf
+  note: 'TODO: verify — slide deck shows Bhamra as author, not a discussion of someone else''s paper. May be a keynote/presentation rather than a discussion.'
+- id: cram-kung-lustig
+  paper_title: Can U.S. Treasury Markets Add and Subtract?
+  paper_authors:
+  - Roberto Gomez-Cram
+  - Howard Kung
+  - Hanno Lustig
+  date: '2024'
+  pdf: pdf/discussions/cram-kung-lustig.pdf
+- id: boyarchenko
+  paper_title: Corporate Credit Provision
+  paper_authors:
+  - Boyarchenko
+  - Elias
+  - Mueller
+  date: '2023-06-06'
+  pdf: pdf/discussions/boyarchenko.pdf
+- id: corhay-li-tong
+  paper_title: Markup Shocks and Asset Prices
+  paper_authors:
+  - Corhay
+  - Li
+  - Tong
+  date: '2023-03-20'
+  pdf: pdf/discussions/corhay-li-tong.pdf
+- id: elenev-landvoigt
+  paper_title: Asset Pricing with Optimal Under-Diversification
+  paper_authors:
+  - Elenev
+  - Landvoigt
+  date: '2023-03-20'
+  pdf: pdf/discussions/elenev-landvoigt.pdf
+- id: jiang-richmond
+  paper_title: Hansen-Jagannathan Bounds with Convenience Yields
+  paper_authors:
+  - Zhengyang Jiang
+  - Robert J. Richmond
+  date: '2022-11-12'
+  pdf: pdf/discussions/jiang-richmond.pdf
+- id: geelen-hajda-morellec-winegar
+  paper_title: Financing Cycles
+  paper_authors:
+  - Thomas Geelen
+  - Jakub Hajda
+  - Erwan Morellec
+  - Adam Winegar
+  date: '2022-09-23'
+  pdf: pdf/discussions/geelen-hajda-morellec-winegar.pdf
+- id: geelen-hajda-morellec-winegar-afa-2024
+  paper_title: Financing Cycles
+  paper_authors:
+  - Thomas Geelen
+  - Jakub Hajda
+  - Erwan Morellec
+  - Adam Winegar
+  date: '2022-09-23'
+  pdf: pdf/discussions/geelen-hajda-morellec-winegar-afa-2024.pdf
+- id: maenhout-vedolin
+  paper_title: Robustness and Dynamic Sentiment
+  paper_authors:
+  - Pascal Maenhout
+  - Andrea Vedolin
+  - Hao Xing
+  date: '2022-04-14'
+  pdf: pdf/discussions/maenhout-vedolin.pdf
+- id: cooper
+  paper_title: 'Foreign bias in equity portfolios: Informational advantage or familiarity bias?'
+  paper_authors:
+  - Martijn Boermans
+  - Ian A. Cooper
+  - Piet Sercu
+  - Rosanne Vanpee
+  date: '2021-12-14'
+  pdf: pdf/discussions/cooper.pdf
+- id: heyderdahi-lleditsch
+  paper_title: Demand Disagreement
+  paper_authors:
+  - Christian Heyerdahl-Larsen
+  - Philipp Illeditsch
+  date: '2021-08-26'
+  pdf: pdf/discussions/heyderdahi-lleditsch.pdf
+- id: avdis
+  paper_title: 'Risk seekers: trade, noise, and the rationalizing effect of market impact on convex preferences'
+  paper_authors:
+  - Efstathios Avdis
+  date: '2020-09-26'
+  pdf: pdf/discussions/avdis.pdf
+- id: bryzalgova
+  paper_title: 'Bayesian Solutions for the Factor Zoo: We Just Ran Two Quadrillion Models'
+  paper_authors:
+  - Svetlana Bryzgalova
+  - Jiantao Huang
+  - Christian Julliard
+  date: '2020-09-26'
+  pdf: pdf/discussions/bryzalgova.pdf
+- id: betermier-calvet-jo
+  paper_title: A Supply and Demand Approach to Equity Pricing Betermier, Calvet, and Jo
+  paper_authors: null
+  date: '2019-12-02'
+  pdf: pdf/discussions/betermier-calvet-jo.pdf
+- id: wangwhitedwuxiao
+  paper_title: 'Bank Market Power and Monetary Policy Transmission: Evidence from a Structural Estimation'
+  paper_authors:
+  - Yifei Wang
+  - Toni M. Whited
+  - Yufeng Wu
+  - Kairong Xiao
+  date: '2019-02-15'
+  pdf: pdf/discussions/wangwhitedwuxiao.pdf
+- id: avernasvandeweyerparies
+  paper_title: Unconventional Monetary Policy and Funding Liquidity Risk
+  paper_authors:
+  - Adrien d'Avernas
+  - Quentin Vandeweyer
+  - Matthieu Darracq Pariès
+  date: '2019'
+  pdf: pdf/discussions/avernasvandeweyerparies.pdf
+- id: buraschitebaldi
+  paper_title: Asset Pricing Implications of Systemic Risk in Network Economies
+  paper_authors:
+  - Andrea Buraschi
+  - Claudio Tebaldi
+  date: '2019'
+  pdf: pdf/discussions/buraschitebaldi.pdf
+- id: davydiukshalistovichyaron
+  paper_title: How Risky are the U.S. Corporate Assets?
+  paper_authors:
+  - Tetiana Davydiuk
+  - Scott Richard
+  - Ivan Shaliastovich
+  - Amir Yaron
+  date: '2019'
+  pdf: pdf/discussions/davydiukshalistovichyaron.pdf
+- id: luo
+  paper_title: Capital Heterogeneity, Time-To-Build, and Return Predictability
+  paper_authors:
+  - Ding Luo
+  date: '2018-11-18'
+  pdf: pdf/discussions/luo.pdf
+- id: ehling
+  paper_title: Tax Collection from Realized Capital Gains on Equity
+  paper_authors:
+  - Paul Ehling
+  - Stathis Tompaidis
+  - Chunyu Yang
+  date: '2018-10-09'
+  pdf: pdf/discussions/ehling.pdf
+- id: uppalzaffaroni
+  paper_title: 'Portfolio Choice with Model Misspecification: A Foundation for Alpha and Beta Portfolios'
+  paper_authors:
+  - Raman Uppal
+  - Paolo Zaffaroni
+  date: '2018-08-23'
+  pdf: pdf/discussions/uppalzaffaroni.pdf
+- id: rinne
+  paper_title: Do Open-market Share Repurchases Supply or Demand Immediacy?
+  paper_authors:
+  - Jankovic
+  - Rinne
+  date: '2018-07-26'
+  pdf: pdf/discussions/rinne.pdf
+- id: schmid
+  paper_title: Risk-Adjusted Capital Allocation and Misallocation
+  paper_authors:
+  - Joel David
+  - Lukas Schmid
+  - David Zeke
+  date: '2018-05-19'
+  pdf: pdf/discussions/schmid.pdf
+- id: liao
+  paper_title: Credit Migration and Covered Interest Rate Parity
+  paper_authors:
+  - Gordon Y. Liao
+  date: 2018-01
+  pdf: pdf/discussions/liao.pdf
+- id: martin-wagner
+  paper_title: What is the Expected Return on a Stock?
+  paper_authors:
+  - Ian Martin
+  - Christian Wagner
+  date: '2018'
+  pdf: pdf/discussions/martin-wagner.pdf
+- id: bansal-ward-yaron
+  paper_title: Equilibrium Wealth Share Dynamics
+  paper_authors:
+  - Ravi Bansal
+  - Colin Ward
+  - Amir Yaron
+  date: '2017'
+  pdf: pdf/discussions/bansal-ward-yaron.pdf
+- id: boediscussion
+  paper_title: Currency Risk Factors in a Recursive Multi-Country Economy
+  paper_authors:
+  - Riccardo Colacito
+  - Max Croce
+  - Federico Gavazzoni
+  - Robert Ready
+  date: '2016-12-15'
+  pdf: pdf/discussions/boediscussion.pdf
+  note: Presented at Bank of England / CEPR International Finance Conference.
+- id: detemple
+  paper_title: Dynamic Noisy Rational Expectations Equilibrium with Information Production and Beliefs-Based Speculation
+  paper_authors:
+  - Detemple
+  - Rindisbacher
+  date: 2016-06
+  pdf: pdf/discussions/detemple.pdf
+- id: dumas-conference
+  paper_title: Dynamic Noisy Rational Expectations Equilibrium with Information Production and Beliefs-Based Speculation
+  paper_authors:
+  - Detemple
+  - Rindisbacher
+  date: 2016-06
+  pdf: pdf/discussions/dumas-conference.pdf
+- id: malamud
+  paper_title: A Dynamic Equilibrium Model of ETFs
+  paper_authors:
+  - Semyon Malamud
+  date: 2016-06
+  pdf: pdf/discussions/malamud.pdf
+- id: lse-paul-woolley
+  paper_title: A Dynamic Equilibrium Model of ETFs
+  paper_authors:
+  - Semyon Malamud
+  date: '2016'
+  pdf: pdf/discussions/lse-paul-woolley.pdf
+- id: li-li-yang
+  paper_title: Sovereign CDS Spreads with Credit Rating
+  paper_authors:
+  - Li
+  - Li
+  - Yang
+  date: '2016'
+  pdf: pdf/discussions/li-li-yang.pdf
+- id: opp
+  paper_title: Learning about Distress
+  paper_authors:
+  - Christian C. Opp
+  date: 2015-09
+  pdf: pdf/discussions/opp.pdf
+- id: andrei
+  paper_title: The Redistributive Effects of Monetary Policy
+  paper_authors:
+  - Daniel Andrei
+  - Bernard Herskovic
+  - Olivier Ledoit
+  date: '2015-06-29'
+  pdf: pdf/discussions/andrei.pdf
+- id: feldhuetter
+  paper_title: The Credit Spread Puzzle — Myth or Reality?
+  paper_authors:
+  - Peter Feldhütter
+  - Stephen Schaefer
+  date: '2015'
+  pdf: pdf/discussions/feldhuetter.pdf
+  video: https://www.youtube.com/watch?v=lzFMhfprMY8
+- id: ehling-gallmeyer-heyerdahl-illeditsch
+  paper_title: Beliefs about Inflation and the Term Structure of Interest Rates
+  paper_authors:
+  - Paul Ehling
+  - Michael Gallmeyer
+  - Christian Heyerdahl-Larsen
+  - Philipp Illeditsch
+  date: '2014-06-14'
+  pdf: pdf/discussions/ehling-gallmeyer-heyerdahl-illeditsch.pdf
+- id: bigio
+  paper_title: Banks, Liquidity Management and Monetary Policy
+  paper_authors:
+  - Javier Bianchi
+  - Saki Bigio
+  date: '2014-05-31'
+  pdf: pdf/discussions/bigio.pdf
+- id: schneider
+  paper_title: Generalized Risk Premia
+  paper_authors:
+  - Paul Schneider
+  date: '2014-04-22'
+  pdf: pdf/discussions/schneider.pdf
+- id: chen-joslin-ni
+  paper_title: Demand for Crash Insurance, Intermediary Constraints, and Stock Return Predictability
+  paper_authors:
+  - Chen
+  - Joslin
+  - Ni
+  date: '2014-02-27'
+  pdf: pdf/discussions/chen-joslin-ni.pdf
+- id: martin
+  paper_title: The Forward Premium Puzzle in a Two-Country World
+  paper_authors:
+  - Ian Martin
+  date: '2014'
+  pdf: pdf/discussions/martin.pdf
+- id: chen-xu-yang
+  paper_title: Systematic Risk, Debt Maturity, and the Term Structure of Credit Spreads
+  paper_authors:
+  - Chen
+  - Xu
+  - Yang
+  date: '2013-08-27'
+  pdf: pdf/discussions/chen-xu-yang.pdf
+- id: cornelli-yilmaz
+  paper_title: Do Short-selling Constraints Matter?
+  paper_authors:
+  - Cornelli
+  - Yilmaz
+  date: '2013-07-20'
+  pdf: pdf/discussions/cornelli-yilmaz.pdf
+- id: colacito-croce-ho-howard
+  paper_title: BKK the EZ Way (Backus-Kehoe-Kydland the Epstein-Zin Way)
+  paper_authors:
+  - Colacito
+  - Croce
+  - Ho
+  - Howard
+  date: '2013-06-14'
+  pdf: pdf/discussions/colacito-croce-ho-howard.pdf
+- id: adrian-boyarchenko
+  paper_title: Intermediary Leverage Cycles and Financial Stability
+  paper_authors:
+  - Tobias Adrian
+  - Nina Boyarchenko
+  date: '2013-05-14'
+  pdf: pdf/discussions/adrian-boyarchenko.pdf
+- id: ahern
+  paper_title: Network Centrality and the Cross Section of Stock Returns
+  paper_authors:
+  - Kenneth Ahern
+  date: '2013-03-14'
+  pdf: pdf/discussions/ahern.pdf
+- id: cole-greenwood-sanchez
+  paper_title: Why Doesn't Technology Flow from Rich to Poor Countries?
+  paper_authors:
+  - Harold L. Cole
+  - Jeremy Greenwood
+  - Juan M. Sanchez
+  date: '2012-09-14'
+  pdf: pdf/discussions/cole-greenwood-sanchez.pdf
+- id: bansal-kiku-shal-yaron
+  paper_title: Volatility, the Macroeconomy and Asset Prices
+  paper_authors:
+  - Ravi Bansal
+  - Dana Kiku
+  - Ivan Shaliastovich
+  - Amir Yaron
+  date: '2012-06-24'
+  pdf: pdf/discussions/bansal-kiku-shal-yaron.pdf
+- id: hong-sraer
+  paper_title: Speculative Betas
+  paper_authors:
+  - Harrison Hong
+  - David Sraer
+  date: '2012-06-12'
+  pdf: pdf/discussions/hong-sraer.pdf
+- id: fais-santaclara
+  paper_title: Optimal Option Portfolio Strategies
+  paper_authors:
+  - José Faias
+  - Pedro Santa-Clara
+  date: '2011-12-14'
+  pdf: pdf/discussions/fais-santaclara.pdf
+- id: garcia
+  paper_title: Robust Assessment of Hedge Fund Performance through Nonparametric Discounting
+  paper_authors:
+  - Almeida
+  - Garcia
+  date: '2011-11-16'
+  pdf: pdf/discussions/garcia.pdf
+- id: isaenko
+  paper_title: Dynamic Equilibrium in an Economy with an Illiquid Stock Market
+  paper_authors:
+  - Sergei Isaenko
+  date: 2011-03
+  pdf: pdf/discussions/isaenko.pdf
+- id: prieto-hugonnier
+  paper_title: Arbitrageurs, Bubbles and Credit Conditions
+  paper_authors:
+  - Prieto
+  - Hugonnier
+  date: '2011'
+  pdf: pdf/discussions/prieto-hugonnier.pdf
+- id: maya
+  paper_title: Financial Distortions and the Distribution of Global Volatility
+  paper_authors:
+  - Maya Eden
+  date: 2010-10
+  pdf: pdf/discussions/maya.pdf
+- id: chen-joslin-tran
+  paper_title: 'Discussion: Chen, Joslin & Tran'
+  paper_authors:
+  - Hui Chen
+  - Scott Joslin
+  - Ngoc-Khanh Tran
+  date: '2010-04-22'
+  pdf: pdf/discussions/chen-joslin-tran.pdf
+- id: gallmeyer-hollifield-palomino-zin
+  paper_title: Arbitrage-Free Bond Pricing With Dynamic Macroeconomic Models
+  paper_authors:
+  - Michael Gallmeyer
+  - Burton Hollifield
+  - Francisco Palomino
+  - Stanley Zin
+  date: 2007-11
+  pdf: pdf/discussions/gallmeyer-hollifield-palomino-zin.pdf
+- id: detemple-tian
+  paper_title: 'Debt with Endogenous Safety Covenants: Default and Corporate Securities'
+  paper_authors:
+  - Detemple
+  - Tian
+  date: 2007-09
+  pdf: pdf/discussions/detemple-tian.pdf
+- id: albuquerque-nengwang
+  paper_title: Agency Conflicts, Investment and Asset Pricing
+  paper_authors:
+  - Rui Albuquerque
+  - Neng Wang
+  date: '2007'
+  pdf: null
+  note: 'TODO: locate slide PDF — folder has no extractable content.'
+- id: routledge-zin
+  paper_title: Generalized Disappointment Aversion and Asset Prices
+  paper_authors:
+  - Bryan R. Routledge
+  - Stanley E. Zin
+  date: 2004-06
+  pdf: pdf/discussions/routledge-zin.pdf
+- id: ai-li
+  paper_title: Financial Intermediation and Capital Reallocation
+  paper_authors:
+  - Hengjie Ai
+  - Kai Li
+  - Fang Yang
+  date: null
+  pdf: pdf/discussions/ai-li.pdf
+- id: bigio-silva-zilberman
+  paper_title: null
+  paper_authors: null
+  date: null
+  pdf: pdf/discussions/bigio-silva-zilberman.pdf
+  note: 'TODO: verify whether this is a real discussion. The folder contains BeliefsPermanentVolatility.pdf and Claude-style project files; the PDF first page shows Khorrami''s ''A Model-Free Assessment
+    of the Importance of Subjective Beliefs for Asset Pricing'' (Mar 2026) — likely a research project folder mis-filed in the discussions directory.'
+  skip_website: true
+cv_by_year:
+  2023:
+  - 9th HEC-McGill Winter Finance Workshop
+  - Adam Smith Asset Pricing Workshop (Oxford)
+  - Global Banking and Finance Conference
+  2022:
+  - Adam Smith Asset Pricing Workshop (INSEAD)
+  - NFA
+  - UNSW Asset Pricing Conference
+  2021:
+  - EFA (2 discussions)
+  - Australasian Banking and Finance Conference
+  2020:
+  - NFA
+  2019:
+  - Asset Pricing Conference (Collegio Carlo Alberto)
+  - Cass Business School Corporate Finance and Asset Prices Conference
+  2018:
+  - SAFE Asset Pricing Conference
+  - Asset Pricing Conference (Collegio Carlo Alberto)
+  - McGill University Risk Management Conference
+  - SFS Cavalcade (Pittsburgh)
+  - EFA
+  - Cass Business School Corporate Finance and Asset Prices Conference
+  2017:
+  - EFA
+  - Macro-Finance Society Meetings (London)
+  - World Finance Conference
+  2016:
+  - Bank of England/CEPR International Finance Conference
+  - UBC Winter Finance Conference
+  - Paul Woolley Centre Conference on Capital Market Dysfunctionality
+  - International Conference on Capital Markets (INSEAD)
+  - Montreal Institute of Structured Finance and Derivatives Conference
+  2015:
+  - Utah Winter Finance Conference
+  - SAFE Asset Pricing Conference (Frankfurt)
+  - Adam Smith Asset Pricing Conference
+  2014:
+  - McGill Risk Management Conference
+  - Frontiers of Finance (Warwick University)
+  - HK UST Finance Symposium
+  - Safe Assets and the Macroeconomy Conference (London Business School)
+  - Annual Conference in International Finance (Imperial College Business School)
+  - WFA
+  2013:
+  - AFA
+  - Adam Smith Asset Pricing Conference
+  - WFA
+  - EFA
+  2012:
+  - McGill University Risk Management Conference
+  - WFA
+  - CEPR Asset Pricing Meetings (Gerzensee)
+  - Advances in Macro-Finance Tepper-LAEF Conference
+  2011:
+  - Adam Smith Asset Pricing Conference
+  - Bank of Canada Workshop on Financial Intermediation and Market Dynamics
+  - Oxford-Man Institute Hedge Fund Conference
+  - Imperial College Hedge Fund Conference
+  2007:
+  - Canadian Macroeconomics Study Group
+  - NFA
+  2006:
+  - WFA
+  2005:
+  - UBC–Bank of Canada Conference
+  2004:
+  - WFA
