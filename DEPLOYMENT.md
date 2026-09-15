@@ -25,15 +25,24 @@ If CV content changed, rebuild the PDFs first (`bash cv/build.sh`) and commit `p
 
 ## Switching harjoatbhamra.com off Wix
 
-Do this once the github.io site looks right. Until the DNS records change, the Wix site stays up and nothing breaks.
+Verified 2026-09-15:
 
-**1. Find where the domain's DNS is managed.** If it was bought through Wix, the nameservers point at Wix and the records are edited in the Wix dashboard (Domains → harjoatbhamra.com → DNS Records). Check with:
+| | |
+|---|---|
+| Registrar | **Network Solutions** — the domain is *not* owned by Wix |
+| Paid until | 2027-11-10 |
+| Nameservers | `ns12.wixdns.net`, `ns13.wixdns.net` — Wix hosts the DNS only |
+| MX records | none — no email runs on this domain, so nothing to preserve |
 
-```bash
-dig +short NS harjoatbhamra.com
-```
+So the domain is kept simply by not cancelling it at Network Solutions. Wix is only providing
+the website and the DNS, and both are replaceable. **Order matters: do not cancel the Wix plan
+while Wix's nameservers still answer for the domain — the site would go dark.**
 
-**2. Replace the existing A / CNAME records for the apex and `www` with GitHub's.** Delete Wix's records for those hosts first — leftovers will keep serving the old site.
+**1. At Network Solutions, move DNS off Wix.** Change the nameservers from `ns12/ns13.wixdns.net`
+to Network Solutions' own DNS, then edit the zone there. (Cloudflare's free DNS works too, and is
+faster, but it means one more account — Network Solutions is already paid for.)
+
+**2. Create the GitHub Pages records.**
 
 Apex (`harjoatbhamra.com`) — four A records:
 
@@ -44,7 +53,7 @@ Apex (`harjoatbhamra.com`) — four A records:
 185.199.111.153
 ```
 
-and, if the registrar supports AAAA, four more:
+and four AAAA records if the registrar supports them:
 
 ```
 2606:50c0:8000::153
@@ -59,13 +68,14 @@ and, if the registrar supports AAAA, four more:
 www  CNAME  gitofthehub.github.io.
 ```
 
-**3. Tell GitHub about the domain** (repo Settings → Pages → Custom domain), or:
+**3. Tell GitHub about the domain** — only after step 2 has propagated, because setting it makes
+`gitofthehub.github.io` redirect to the custom domain:
 
 ```bash
 gh api -X PUT repos/GitOfTheHub/GitOfTheHub.github.io/pages -f cname=harjoatbhamra.com
 ```
 
-GitHub re-checks DNS, then issues a Let's Encrypt certificate. Once "Enforce HTTPS" can be ticked (usually within an hour of propagation), tick it.
+GitHub re-checks DNS and issues a Let's Encrypt certificate; tick "Enforce HTTPS" once it is offered.
 
 **4. Verify.**
 
@@ -74,7 +84,11 @@ dig +short harjoatbhamra.com
 curl -sI https://harjoatbhamra.com | head -3
 ```
 
-**5. Cancel the Wix plan** once the new site has been live for a few days. Keep the domain registration itself — only the hosting plan is being retired.
+**5. Only now cancel the Wix Premium plan** (Wix dashboard → Subscriptions). Keep the Network
+Solutions registration — that is what owns the name.
+
+Optional, later: Network Solutions renewals are expensive. The domain can be transferred to
+Cloudflare Registrar (at cost, about $11/yr) any time; the transfer adds a year to the expiry.
 
 ## If a push does not start a deploy
 
