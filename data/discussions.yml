@@ -343,6 +343,14 @@ discussions:
   - Ian Martin
   date: '2014'
   pdf: pdf/discussions/martin.pdf
+- id: ai-li
+  paper_title: Financial Intermediation and Capital Reallocation
+  paper_authors:
+  - Hengjie Ai
+  - Kai Li
+  - Fang Yang
+  date: '2014'
+  pdf: pdf/discussions/ai-li.pdf
 - id: chen-xu-yang
   paper_title: Systematic Risk, Debt Maturity, and the Term Structure of Credit Spreads
   paper_authors:
@@ -476,14 +484,6 @@ discussions:
   - Stanley E. Zin
   date: 2004-06
   pdf: pdf/discussions/routledge-zin.pdf
-- id: ai-li
-  paper_title: Financial Intermediation and Capital Reallocation
-  paper_authors:
-  - Hengjie Ai
-  - Kai Li
-  - Fang Yang
-  date: null
-  pdf: pdf/discussions/ai-li.pdf
 - id: bigio-silva-zilberman
   paper_title: null
   paper_authors: null
