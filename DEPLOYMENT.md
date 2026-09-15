@@ -23,72 +23,52 @@ gh run watch --exit-status
 
 If CV content changed, rebuild the PDFs first (`bash cv/build.sh`) and commit `pdf/Bhamra-CV.pdf` — the workflow does not run LaTeX.
 
-## Switching harjoatbhamra.com off Wix
+## The domain (done 2026-09-15)
 
-Verified 2026-09-15:
+`harjoatbhamra.com` was bought through Wix, which registers domains via Network Solutions —
+that is why whois names Network Solutions while everything is managed in the Wix account.
+Wix does not allow a registrant to move nameservers off Wix, so the DNS records themselves
+were repointed inside Wix (Account → Domains → ⋯ → Manage DNS records):
 
-| | |
-|---|---|
-| Registrar | **Network Solutions** — the domain is *not* owned by Wix |
-| Paid until | 2027-11-10 |
-| Nameservers | `ns12.wixdns.net`, `ns13.wixdns.net` — Wix hosts the DNS only |
-| MX records | none — no email runs on this domain, so nothing to preserve |
+| Record | Host | Value |
+|---|---|---|
+| A | harjoatbhamra.com | 185.199.108.153 |
+| A | harjoatbhamra.com | 185.199.109.153 |
+| A | harjoatbhamra.com | 185.199.110.153 |
+| A | harjoatbhamra.com | 185.199.111.153 |
+| CNAME | www | gitofthehub.github.io |
 
-So the domain is kept simply by not cancelling it at Network Solutions. Wix is only providing
-the website and the DNS, and both are replaceable. **Order matters: do not cancel the Wix plan
-while Wix's nameservers still answer for the domain — the site would go dark.**
-
-**1. At Network Solutions, move DNS off Wix.** Change the nameservers from `ns12/ns13.wixdns.net`
-to Network Solutions' own DNS, then edit the zone there. (Cloudflare's free DNS works too, and is
-faster, but it means one more account — Network Solutions is already paid for.)
-
-**2. Create the GitHub Pages records.**
-
-Apex (`harjoatbhamra.com`) — four A records:
-
-```
-185.199.108.153
-185.199.109.153
-185.199.110.153
-185.199.111.153
-```
-
-and four AAAA records if the registrar supports them:
-
-```
-2606:50c0:8000::153
-2606:50c0:8001::153
-2606:50c0:8002::153
-2606:50c0:8003::153
-```
-
-`www` — one CNAME:
-
-```
-www  CNAME  gitofthehub.github.io.
-```
-
-**3. Tell GitHub about the domain** — only after step 2 has propagated, because setting it makes
-`gitofthehub.github.io` redirect to the custom domain:
+GitHub Pages then had the custom domain attached and HTTPS enforced:
 
 ```bash
 gh api -X PUT repos/GitOfTheHub/GitOfTheHub.github.io/pages -f cname=harjoatbhamra.com
+gh api -X PUT repos/GitOfTheHub/GitOfTheHub.github.io/pages -F https_enforced=true
 ```
 
-GitHub re-checks DNS and issues a Let's Encrypt certificate; tick "Enforce HTTPS" once it is offered.
+`www` 301-redirects to the apex — that is GitHub's own behaviour and is correct.
 
-**4. Verify.**
+Wix's DNS hosting stays in place because it comes with the registration; no Wix site plan is
+needed for it. Left over in the Wix zone: `m.harjoatbhamra.com` (Wix's mobile host), which now
+points at nothing useful and can be deleted.
+
+### Money
+
+- **Wix Premium plan (VIP):** auto-renew already OFF, prepaid to **3 Jan 2027**, then it lapses.
+  No refund is possible this far into the term, so there is nothing to cancel — let it expire.
+- **Domain registration:** separate Wix subscription, renews **10 Nov 2027** on a 3-year cycle.
+  This is the one to keep.
+- A Cloudflare zone for the domain was created during this work and is unused (it never
+  activated, because the nameservers cannot leave Wix). Delete it, or keep it in case the
+  domain is ever transferred to Cloudflare Registrar — which is the way to get off Wix
+  entirely and onto cheaper renewals, and can be done any time before Nov 2027.
+
+## Verifying the domain
 
 ```bash
-dig +short harjoatbhamra.com
+dig +short A harjoatbhamra.com @ns12.wixdns.net    # authoritative — the truth
+dig +short A harjoatbhamra.com                      # your resolver — may lag up to an hour
 curl -sI https://harjoatbhamra.com | head -3
 ```
-
-**5. Only now cancel the Wix Premium plan** (Wix dashboard → Subscriptions). Keep the Network
-Solutions registration — that is what owns the name.
-
-Optional, later: Network Solutions renewals are expensive. The domain can be transferred to
-Cloudflare Registrar (at cost, about $11/yr) any time; the transfer adds a year to the expiry.
 
 ## If a push does not start a deploy
 
