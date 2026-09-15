@@ -64,10 +64,9 @@ print("</ul>")
 #| output: asis
 from _helpers import load, render_paper
 pubs = load("publications")
-# Show top 3 published + R&R + top 3 working
+# Show the three most recent published papers, then the top three working papers
 shown = []
 shown += pubs.get("published", [])[:3]
-shown += [p for p in pubs.get("under_review", []) if not p.get("skip_website")]
 shown += [p for p in pubs.get("working", [])[:3] if not p.get("skip_website")]
 for p in shown:
     print(render_paper(p))

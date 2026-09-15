@@ -22,7 +22,7 @@ def section(heading: str, items: list, intro: str = ""):
         print(render_paper(p))
 
 section("Publications", pubs.get("published", []))
-section("Under Review", pubs.get("under_review", []))
+section("Under Review", pubs.get("under_review", []))   # empty for now; renders only when populated
 section("Working Papers", pubs.get("working", []))
 section("Work in Progress", pubs.get("in_progress", []))
 ```

@@ -6,7 +6,8 @@
 #   authors         — list in citation order (alphabetical by surname in economics convention)
 #   year            — print volume year for published; current revision year for working papers
 #   journal         — only for published papers (name, abbrev, volume, issue, pages)
-#   status          — for non-published: "rr_at" (Revise & Resubmit) | "working" | "in_progress"
+#   status          — optional free-text status line shown under the title (e.g. a
+#                     journal round). Omit it to present a paper plainly as a working paper.
 #   doi             — Crossref DOI
 #   ssrn_id         — SSRN abstract ID (numeric)
 #   links           — explicit URLs (publisher, ssrn, pdf, etc.)
@@ -15,7 +16,7 @@
 #   notes           — free text (e.g. "lead article")
 #   skip_website    — set true to keep on CV only (e.g. paper not yet on SSRN)
 #
-# Sections below: published, under_review, working, in_progress.
+# Sections below: published, under_review (currently empty), working, in_progress.
 
 published:
 
@@ -235,7 +236,7 @@ published:
     links:
       pdf: https://www.harjoatbhamra.com/_files/ugd/ce4bea_ed651b66a5754b53b10075ed79833c75.pdf
 
-under_review:
+working:
 
   - id: small-growth-distress
     title: "Small Growth and Distress Returns: Two Sides of the Same Coin?"
@@ -243,7 +244,6 @@ under_review:
       - Harjoat S. Bhamra
       - Kyung Hwan Shim
     year: 2017
-    status: "Revise & Resubmit at the Journal of Finance"
     ssrn_id: 2348433
     awards:
       - { name: Best Paper Award in Business Valuation, venue: Northern Finance Association, year: 2014 }
@@ -253,8 +253,6 @@ under_review:
       - { venue: EFA, year: 2018 }
     links:
       ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2348433
-
-working:
 
   - id: leverage-dynamics-crises
     title: "Leverage Dynamics and Learning About Economic Crises"
@@ -272,17 +270,6 @@ working:
       - { venue: SFS Cavalcade, year: 2025 }
     links:
       ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4898492
-
-  - id: cdx-fear-leverage
-    title: "CDX Markets, Time-Varying Fear, and Corporate Leverage"
-    authors:
-      - Artur Anschukov
-      - Harjoat S. Bhamra
-      - Lars-Alexander Kuehn
-    year: 2026
-    ssrn_id: 6367639
-    links:
-      ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6367639
 
   - id: concentrated-economy
     title: "Asset Pricing in a Concentrated Economy"

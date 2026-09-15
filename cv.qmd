@@ -67,14 +67,17 @@ for p in pubs.get("published", []):
     print(render_paper(p))
 ```
 
-### Under Review
-
 ```{python}
 #| output: asis
+# "Under Review" is printed from here rather than as a markdown heading so the
+# heading disappears when nothing is under review (currently the case).
 from _helpers import load, render_paper
 pubs = load("publications")
-for p in pubs.get("under_review", []):
-    print(render_paper(p))
+under_review = [p for p in pubs.get("under_review", []) if not p.get("skip_website")]
+if under_review:
+    print("### Under Review\n")
+    for p in under_review:
+        print(render_paper(p))
 ```
 
 ### Completed Working Papers
