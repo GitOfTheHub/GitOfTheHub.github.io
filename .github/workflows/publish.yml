@@ -50,3 +50,5 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+# Re-registered after the initial push did not attach Actions to push events.
