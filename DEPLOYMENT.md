@@ -76,6 +76,23 @@ curl -sI https://harjoatbhamra.com | head -3
 
 **5. Cancel the Wix plan** once the new site has been live for a few days. Keep the domain registration itself — only the hosting plan is being retired.
 
+## If a push does not start a deploy
+
+This happened once when the repo was new: pushes created no workflow run at all (no Actions
+check suite on the commit), while manual runs worked. Toggling Actions off and back on for the
+repo re-attached the push trigger:
+
+```bash
+gh api -X PUT repos/GitOfTheHub/GitOfTheHub.github.io/actions/permissions -F enabled=false
+gh api -X PUT repos/GitOfTheHub/GitOfTheHub.github.io/actions/permissions -F enabled=true -f allowed_actions=all
+```
+
+Either way, a deploy can always be started by hand:
+
+```bash
+gh workflow run "Render and publish" --ref main
+```
+
 ## Notes
 
 - `_quarto.yml` already sets `site-url: https://harjoatbhamra.com`, so the sitemap and canonical links point at the final domain. Until the DNS switch they will name a URL that still serves the Wix site; no action needed, it resolves itself on cutover.
