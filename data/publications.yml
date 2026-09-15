@@ -168,7 +168,7 @@ published:
     doi: 10.1257/aer.100.2.547
     links:
       publisher: https://doi.org/10.1257/aer.100.2.547
-      pdf: https://www.harjoatbhamra.com/_files/ugd/ce4bea_8c74914c31e54b33b911a77e3717c169.pdf
+      pdf: pdf/papers/bhamra-strebulaev-aer-pp-2010.pdf
 
   - id: levered-equity-risk-premium
     title: "The Levered Equity Risk Premium and Credit Spreads: A Unified Framework"
@@ -234,7 +234,7 @@ published:
       name: International Journal of Theoretical and Applied Finance
       abbrev: IJTAF
     links:
-      pdf: https://www.harjoatbhamra.com/_files/ugd/ce4bea_ed651b66a5754b53b10075ed79833c75.pdf
+      pdf: pdf/papers/bhamra-imitation-ijtaf-2000.pdf
 
 working:
 
